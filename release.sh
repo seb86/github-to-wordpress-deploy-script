@@ -85,7 +85,7 @@ echo "Is the line secure?"
 echo "---------------------------------------------------------------------"
 echo " - y for SSH"
 echo " - n for HTTPS"
-read -p SECURE_LINE
+read -p "" SECURE_LINE
 
 # Set GitHub Repository URL
 if [[ ${SECURE_LINE} = "y" ]]
