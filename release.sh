@@ -8,6 +8,16 @@ echo "---------------------------------------------------------------------"
 echo "                  GitHub to WordPress.org RELEASER                   "
 echo "---------------------------------------------------------------------"
 read -p "Enter the ROOT PATH of the plugin you want to release: " ROOT_PATH
+
+if [[ -d $ROOT_PATH ]]; then
+	echo "---------------------------------------------------------------------"
+	echo "New ROOT PATH has been set."
+	cd $ROOT_PATH
+elif [[ -f $ROOT_PATH ]]; then
+	echo "---------------------------------------------------------------------"
+	read -p "$ROOT_PATH is a file. Please enter a ROOT PATH: " ROOT_PATH
+fi
+
 echo "---------------------------------------------------------------------"
 read -p "Tag and Release Version: " VERSION
 echo "---------------------------------------------------------------------"
@@ -70,8 +80,22 @@ TEMP_GITHUB_REPO=${GITHUB_REPO_NAME}"-git"
 # Delete old GitHub cache just incase it was not cleaned before after the last release.
 rm -Rf $ROOT_PATH$TEMP_GITHUB_REPO
 
+echo "---------------------------------------------------------------------"
+echo "Is the line secure?"
+echo "---------------------------------------------------------------------"
+echo " - y for SSH"
+echo " - n for HTTPS"
+read -p SECURE_LINE
+
 # Set GitHub Repository URL
-GIT_REPO="https://github.com/"${GITHUB_USER}"/"${GITHUB_REPO_NAME}".git"
+if [[ ${SECURE_LINE} = "y" ]]
+then
+	GIT_REPO="git@github.com:"${GITHUB_USER}"/"${GITHUB_REPO_NAME}".git"
+else
+	GIT_REPO="https://github.com/"${GITHUB_USER}"/"${GITHUB_REPO_NAME}".git"
+fi;
+
+clear
 
 # CLONE GIT DIR
 echo "Cloning GIT repository from GitHub"
@@ -79,14 +103,25 @@ git clone --progress $GIT_REPO $TEMP_GITHUB_REPO || { echo "Unable to clone repo
 
 # MOVE INTO GIT DIR
 cd $ROOT_PATH$TEMP_GITHUB_REPO
+clear
 
 # LIST BRANCHES
-clear
-git fetch origin
+echo "---------------------------------------------------------------------"
+read -p "Which remote are we fetching? Default is 'origin'" ORIGIN
+echo "---------------------------------------------------------------------"
+
+# IF REMOTE WAS LEFT EMPTY THEN FETCH ORIGIN BY DEFAULT
+if [[ -z ${ORIGIN} ]]
+then
+	git fetch origin
+else
+	git fetch ${ORIGIN}
+fi;
+
 echo "Which branch do you wish to release?"
 git branch -r || { echo "Unable to list branches."; exit 1; }
 echo ""
-read -p "origin/" BRANCH
+read -p ${ORIGIN} "/" BRANCH
 
 # Switch Branch
 echo "Switching to branch"
@@ -145,7 +180,7 @@ MISSING_PATHS=$( svn status | sed -e '/^!/!d' -e 's/^!//' )
 
 # iterate over filepaths
 for MISSING_PATH in $MISSING_PATHS; do
-    svn rm --force "$MISSING_PATH"
+	svn rm --force "$MISSING_PATH"
 done
 
 # COPY TRUNK TO TAGS/$VERSION
