@@ -1,4 +1,4 @@
-# Github to WordPress.org Deployment Script
+# GitHub to WordPress.org Deployment Script
 Releasing WordPress plugins can be quite a chore so a script that handles all of that for you is very helpful. This allows you to do that.
 
 This script is dummy proof. No need to configure anything. Just run the script and follow the instructions as you go along.
