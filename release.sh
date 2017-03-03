@@ -130,9 +130,6 @@ read -p ${ORIGIN} "/" BRANCH
 echo "Switching to branch"
 git checkout ${BRANCH} || { echo "Unable to checkout branch."; exit 1; }
 
-echo ""
-read -p "Press [ENTER] to deploy branch "${BRANCH}
-
 # REMOVE UNWANTED FILES & FOLDERS
 echo "Removing unwanted files"
 rm -Rf .git
@@ -163,6 +160,9 @@ rm -f .editorconfig
 rm -f apigen.neon
 rm -f screenshot-*.jpg
 rm -f screenshot-*.png
+
+echo ""
+read -p "Press [ENTER] to deploy branch "${BRANCH}
 
 # MOVE INTO SVN DIR
 cd "../"$TEMP_SVN_REPO
