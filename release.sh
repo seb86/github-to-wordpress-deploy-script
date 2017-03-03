@@ -114,6 +114,9 @@ echo "---------------------------------------------------------------------"
 if [[ -z ${ORIGIN} ]]
 then
 	git fetch origin
+
+	# Set ORIGIN as origin if left blank
+	ORIGIN=origin
 else
 	git fetch ${ORIGIN}
 fi;
@@ -136,27 +139,30 @@ rm -Rf .git
 rm -Rf .github
 rm -Rf tests
 rm -Rf apigen
+rm -Rf node_modules
 rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
+rm -f *.md
+rm -f *.rb
+rm -f *.sh
+rm -f *.lock
+rm -f .coveralls.yml
+rm -f .scrutinizer.yml
 rm -f .travis.yml
+rm -f *.yml
 rm -f Gruntfile.js
+rm -f composer.json
 rm -f package.json
 rm -f .jscrsrc
 rm -f .jshintrc
-rm -f composer.json
 rm -f phpunit.xml
 rm -f phpunit.xml.dist
-rm -f README.md
-rm -f .coveralls.yml
+rm -f *.xml
 rm -f .editorconfig
-rm -f .scrutinizer.yml
 rm -f apigen.neon
-rm -f CHANGELOG.md
-rm -f CONTRIBUTING.md
-rm -f Theme-Presets.md
+rm -f screenshot-*.jpg
 rm -f screenshot-*.png
-rm -f release.sh
 
 # MOVE INTO SVN DIR
 cd "../"$TEMP_SVN_REPO
