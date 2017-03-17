@@ -124,7 +124,7 @@ fi;
 echo "Which branch do you wish to release?"
 git branch -r || { echo "Unable to list branches."; exit 1; }
 echo ""
-read -p ${ORIGIN} "/" BRANCH
+read -p ${ORIGIN}"/"${BRANCH}
 
 # Switch Branch
 echo "Switching to branch"
