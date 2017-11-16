@@ -71,3 +71,8 @@ All you have to do is download the script release.sh from this repository and pl
 - Committing to WordPress.org can take a while so be patient.
 - I have tested this on Mac only.
 - Use at your own risk of course :smile:
+
+### Support Sébastien's Open Source Projects!
+If you'd like me to keep producing free and open source software or if you use this script and find it useful then please consider [paying for an hour](https://www.paypal.me/CodeBreaker/100eur) of my time. I'll spend two hours on open source for each contribution.
+
+You can find more of my Free and Open Source scripts on [GitHub](https://github.com/seb86)
