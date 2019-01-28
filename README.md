@@ -44,12 +44,19 @@ The following file types are removed from the parent directory of the plugin loc
 ```
 * .git
 * .github
+* .wordpress-org
 * tests
 * apigen
 * node_modules
+* src
+* .babelrc
+* .editorconfig
+* .eslintignore
+* .eslintrc.json
 * .gitattributes
 * .gitignore
 * .gitmodules
+* gulpfile.js
 * *.md (Any MarkDown file)
 * *.rb (Any ruby file)
 * *.sh (Any bash scripts)
@@ -61,11 +68,12 @@ The following file types are removed from the parent directory of the plugin loc
 * Gruntfile.js
 * composer.json
 * package.json
+* package-lock.json
 * .jscrsrc
 * .jshintrc
 * phpunit.xml
-* *.xml (Any other XML files)
 * phpunit.xml.dist
+* *.xml (Any other XML files)
 * .editorconfig
 * apigen.neon
 * screenshot-*.jpg
