@@ -134,12 +134,19 @@ git checkout ${BRANCH} || { echo "Unable to checkout branch."; exit 1; }
 echo "Removing unwanted files"
 rm -Rf .git
 rm -Rf .github
+rm -Rf .wordpress-org
 rm -Rf tests
 rm -Rf apigen
 rm -Rf node_modules
+rm -Rf src
+rm -f .babelrc
+rm -f .editorconfig
+rm -f .eslintignore
+rm -f .eslintrc.json
 rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
+rm -f gulpfile.js
 rm -f *.md
 rm -f *.rb
 rm -f *.sh
@@ -151,6 +158,7 @@ rm -f *.yml
 rm -f Gruntfile.js
 rm -f composer.json
 rm -f package.json
+rm -f package-lock.json
 rm -f .jscrsrc
 rm -f .jshintrc
 rm -f phpunit.xml
