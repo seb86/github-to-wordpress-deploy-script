@@ -111,7 +111,7 @@ git clone --progress $GIT_REPO $TEMP_GITHUB_REPO || { echo "Unable to clone repo
 cd $ROOT_PATH$TEMP_GITHUB_REPO
 clear
 
-# LIST BRANCHES
+# Which Remote?
 echo "---------------------------------------------------------------------"
 read -p "Which remote are we fetching? Default is 'origin'" ORIGIN
 echo "---------------------------------------------------------------------"
@@ -128,6 +128,7 @@ fi;
 
 clear
 
+# List Branches
 echo "---------------------------------------------------------------------"
 git branch -r || { echo "Unable to list branches."; exit 1; }
 echo "---------------------------------------------------------------------"
