@@ -158,6 +158,7 @@ rm -Rf tests
 rm -Rf apigen
 rm -Rf node_modules
 rm -Rf src
+rm -RF .idea/*
 rm -f .babelrc
 rm -f .editorconfig
 rm -f .eslintignore
@@ -166,6 +167,7 @@ rm -f .gitattributes
 rm -f .gitignore
 rm -f .gitmodules
 rm -f gulpfile.js
+rm -f .idea
 rm -f *.md
 rm -f *.rb
 rm -f *.sh
