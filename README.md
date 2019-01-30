@@ -2,7 +2,7 @@
 
 A simple deploy script to push any branch from your GitHub repository to your WordPress.org plugin SVN for a new release.
 
-## Overview 🔔
+## 🔔 Overview
 
 Releasing WordPress plugins can be quite a chore so a script that handles all of that for you is very helpful. This allows you to do that.
 
@@ -17,6 +17,7 @@ Yes, it's free. But here's what you should _really_ care about:
 * Steps are easy to understand.
 * Does everything for you.
 
+
 ### What's the Catch?
 
 This is a non-commercial script. As such:
@@ -27,10 +28,11 @@ This is a non-commercial script. As such:
 
 Please understand that this repository is not a place to seek help. Use it to report bugs, propose improvements, or discuss new features.
 
-## Features ✔️
+## ✔️ Features
 * Supports HTTPS and SSH connections.
 * Specify your remote when fetching from your repository.
 * Supports Windows if you have TortoiseSVN installed.
+
 
 ## What does the script do?
 This script will pull down your remote GIT and SVN repositories, tag a release using the branch you specify, and commit everything to WordPress.org.
@@ -83,7 +85,7 @@ The following file types are removed from the parent directory of the plugin loc
 Don't see a file that needs to be removed. Create an issue and let me know which file or folder that needs to be removed.
 
 
-## Requirements ✅
+## ✅ Requirements
 
 To use the script you must:
 
@@ -99,12 +101,12 @@ To use the script you must:
 3. Follow the prompts.
 
 
-## Feedback ⭐
+## ⭐ Feedback
 
 GitHub to WordPress.org Deployment Script is released freely and openly. Feedback or ideas and approaches to solving limitations in GitHub to WordPress.org Deployment Script is greatly appreciated.
 
 
-#### Reporting Issues 📝
+#### 📝 Reporting Issues
 
 If you think you have found a bug in the script, please [open a new issue](https://github.com/seb86/github-to-wordpress-deploy-script/issues/new) and I will do my best to help you out.
 
