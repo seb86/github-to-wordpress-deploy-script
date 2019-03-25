@@ -4,7 +4,7 @@ clear
 
 # ASK INFO
 echo "---------------------------------------------------------------------"
-echo "                  GitHub to WordPress.org RELEASER                   "
+echo "             GitHub to WordPress.org Deployment Script               "
 echo "---------------------------------------------------------------------"
 read -p "Enter the ROOT PATH of the plugin you want to release: " ROOT_PATH
 
