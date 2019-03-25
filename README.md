@@ -2,6 +2,13 @@
 
 A simple deploy script to push any branch from your GitHub repository to your WordPress.org plugin SVN for a new release.
 
+Quick Links: [Overview](#-overview) | [Features](#-features) | [Usage](#-usage) | [Contribute](#-contribute)
+
+
+###### Follow me
+
+💻 [Website](https://sebastiendumont.com) 🐦[Twitter](https://twitter.com/sebd86)
+
 ## 🔔 Overview
 
 Releasing WordPress plugins can be quite a chore so a script that handles all of that for you is very helpful. This allows you to do that.
@@ -10,15 +17,13 @@ This script is dummy proof and you do NOT need to configure anything so long as 
 
 Just run the script and follow the instructions as you go along and your new release will be up in no time.
 
-
-### Is This Free?
+### 😄 Is This Free?
 
 Yes, it's free. But here's what you should _really_ care about:
 * Steps are easy to understand.
 * Does everything for you.
 
-
-### What's the Catch?
+### ❓ What's the Catch?
 
 This is a non-commercial script. As such:
 
@@ -29,12 +34,13 @@ This is a non-commercial script. As such:
 Please understand that this repository is not a place to seek help. Use it to report bugs, propose improvements, or discuss new features.
 
 ## ✔️ Features
+
 * Supports HTTPS and SSH connections.
 * Specify your remote when fetching from your repository.
 * Supports Windows if you have TortoiseSVN installed.
 
-
 ## What does the script do?
+
 This script will pull down your remote GIT and SVN repositories, tag a release using the branch you specify, and commit everything to WordPress.org.
 
 As you run the script it will asks questions at certain points to setup the process of the script such as the ROOT Path of your plugin, your GitHub username, repository slug etc.
@@ -84,7 +90,6 @@ The following file types are removed from the parent directory of the plugin loc
 
 Don't see a file that needs to be removed. Create an issue and let me know which file or folder that needs to be removed.
 
-
 ## ✅ Requirements
 
 To use the script you must:
@@ -93,38 +98,36 @@ To use the script you must:
 2. Already have a WordPress.org SVN repository setup for your plugin.
 3. Have both GIT and SVN setup on your machine and available from the command line.
 
-
 ## Usage
 
 1. Open up terminal/command prompt and change to the directory containing the script.
 2. Run: ```sh release.sh```
 3. Follow the prompts.
 
-
 ## ⭐ Feedback
 
 GitHub to WordPress.org Deployment Script is released freely and openly. Feedback or ideas and approaches to solving limitations in GitHub to WordPress.org Deployment Script is greatly appreciated.
-
 
 #### 📝 Reporting Issues
 
 If you think you have found a bug in the script, please [open a new issue](https://github.com/seb86/github-to-wordpress-deploy-script/issues/new) and I will do my best to help you out.
 
+## 👍 Contribute
 
-## Contribute
+If you or your company use **GitHub to WordPress.org Deployment Script** or appreciate the work I’m doing in open source, please consider supporting me directly so I can continue maintaining it and keep evolving the project.
 
-If you or your company use GitHub to WordPress.org Deployment Script or appreciate the work I’m doing in open source, please consider supporting me directly so I can continue maintaining it and keep evolving the project. It's pretty clear that software actually costs something, and even though it may be offered freely, somebody is paying the cost.
+You'll be helping to ensure I can spend the time not just fixing bugs, adding features or releasing new versions but also keeping the project afloat. Any contribution you make is a big help and is greatly appreciated.
 
-You'll be helping to ensure I can spend the time not just fixing bugs, adding features, releasing new versions, but also keeping the project afloat. Any contribution you make is a big help and is greatly appreciated.
+Please also consider starring ✨ and sharing 👍 the project repository! This helps the project getting known and grow with the community. 🙏
 
-Please also consider starring ✨ and sharing 👍 the repo! This helps the project getting known and grow with the community. 🙏
-
-If you want to do a one-time donation, you can donate to:
+I accept one-time donations and monthly via [BuyMeACoffee.com](https://www.buymeacoffee.com/sebastien)
 - [My PayPal](https://www.paypal.me/codebreaker)
 - [BuyMeACoffee.com](https://www.buymeacoffee.com/sebastien)
+- Bitcoin (BTC): `3L4cU7VJsXBFckstfJdP2moaNhTHzVDkKQ`
+- Ethereum (ETH): `0xc6a3C18cf11f5307bFa11F8BCBD51F355b6431cB`
+- Litecoin (LTC): `MNNy3xBK8sM8t1YUA2iAwdi9wRvZp9yRoi`
 
 Thank you for your support! 🙌
-
 
 ## Final Notes
 
@@ -132,3 +135,12 @@ Thank you for your support! 🙌
 - Committing to WordPress.org can take a while so be patient.
 - Use at your own risk of course :smile:
 
+##### Credits
+
+GitHub to WordPress.org Deployment Script is developed and maintained by [Sébastien Dumont](https://sebastiendumont.com/about/).
+
+---
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/seb86/my-open-source-readme-template/master/a-sebastien-dumont-production.png" width="353">
+</p>
