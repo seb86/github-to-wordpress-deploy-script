@@ -2,7 +2,7 @@
 
 A simple deploy script to push any branch from your GitHub repository to your WordPress.org plugin SVN for a new release.
 
-Quick Links: [Overview](#-overview) | [Features](#-features) | [Usage](#-usage) | [Contribute](#-contribute)
+Quick Links: [Overview](#-overview) | [Features](#%EF%B8%8F-features) | [Usage](#usage) | [Contribute](#-contribute)
 
 
 ###### Follow me
