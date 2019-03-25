@@ -80,7 +80,7 @@ read -p "Enter repository slug: " GITHUB_REPO_NAME
 clear
 
 # Set temporary folder for GitHub release.
-TEMP_GITHUB_REPO=${GITHUB_REPO_NAME}"-git"
+TEMP_GITHUB_REPO="prepping-release"
 
 # Delete old GitHub cache just incase it was not cleaned before after the last release.
 rm -Rf $ROOT_PATH$TEMP_GITHUB_REPO
