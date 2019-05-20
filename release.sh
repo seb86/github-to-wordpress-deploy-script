@@ -159,7 +159,11 @@ rm -Rf tests
 rm -Rf apigen
 rm -Rf node_modules
 rm -Rf src
-rm -RF .idea/*
+rm -Rf sass
+rm -Rf scss
+rm -Rf assets/sass
+rm -Rf assets/scss
+rm -Rf .idea/*
 rm -f .babelrc
 rm -f .editorconfig
 rm -f .eslintignore
