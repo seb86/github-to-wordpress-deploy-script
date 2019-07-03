@@ -1,10 +1,13 @@
 #!/bin/sh
 
+SCRIPT_VERSION="2"
+
+set -e
 clear
 
 # ASK INFO
 echo "---------------------------------------------------------------------"
-echo "             GitHub to WordPress.org Deployment Script               "
+echo "           GitHub to WordPress.org Deployment Script v${SCRIPT_VERSION}               "
 echo "---------------------------------------------------------------------"
 read -p "Enter the ROOT PATH of the plugin you want to release: " ROOT_PATH
 
@@ -32,8 +35,14 @@ echo ""
 read -p "Press [ENTER] to begin releasing v"${VERSION}
 clear
 
+echo "-------------------------------------------------------"
+echo "Did you tag a pre-release last?"
+read -p "Enter Y for Yes or N for No "${BETA}""
+echo "-------------------------------------------------------"
+clear
+
 # Check if version is already released.
-if $ROOT_PATH git show-ref --tags | egrep -q "refs/tags/v${VERSION}"; then
+if ${BETA} = 'n' && $ROOT_PATH git show-ref --tags --exclude-existing | egrep -q "refs/tags/v${VERSION}"; then
 	echo "---------------------------------------------------------------------"
 	echo "Version already tagged and released.";
 	echo "---------------------------------------------------------------------"
